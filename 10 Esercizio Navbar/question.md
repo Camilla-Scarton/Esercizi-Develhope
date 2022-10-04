@@ -1,0 +1,2 @@
+Replicare la struttura html della navbar presente nel file con estensione .zip, senza aggiungere un foglio di stile CSS.
+Per replicare lo scheletro html della navbar prova ad utilizzare il tag semantico < nav >. Per i link presenti nella navbar, invece, prova ad utilizzare una lista non ordinata.

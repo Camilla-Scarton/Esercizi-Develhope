@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Lezione HTML</title>
+
+        <!--Lo stile è per i bordi arrotondati, la spaziatura del testo e la dimensione fissa della card-->
+        <style>
+            article {
+                height: fit-content;
+                width: 240px;
+                max-width: 12cm;
+            }
+            article, div, img {
+                border: 1.5px solid rgb(162, 162, 171);
+                border-radius: 2%
+            }
+            div {
+                padding: 4%;
+            }
+            a {
+                padding-right: 4%;
+            }
+            div.link {
+                padding: 8%
+            }
+        </style>
+    </head>
+
+    <body>
+        <article>
+            <img src="assets/laptop.png" alt="laptop on table" width="238">
+            <div>
+                <h3>Card Title</h3>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+            </div>
+            <div>An item</div>
+            <div>A second item</div>
+            <div>A third item</div>
+            <div class="link">
+                <a href=" ">Card link</a>
+                <span></span>
+                <a href=" ">Another link</a>
+            </div>
+        </article>
+    </body>
+</html>

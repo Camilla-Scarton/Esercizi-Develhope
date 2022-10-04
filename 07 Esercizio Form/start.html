@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+	<form action="#">
+		<h1>Form di registrazione</h1>
+		<p>Completa i campi.</p>
+		<section id="info-account">
+			<b>Informazioni account</b>
+			<label for="email">Email:
+				<input type="email" id="email" name="email">
+			</label>
+			<label for="password">Password:
+				<input type="password" id="password" name="password">
+			</label>
+		</section>
+		<br>
+		<section id="personal-data">
+			<b>Dati anagrafici</b>
+			<label for="name-surname">Nome e cognome:
+				<input type="text" id="name-surname" name="name-surname">
+			</label>
+			<label for="birth-date">Data di nascita:
+				<input type="date" id="birth-date" name="birth-date">
+			</label>
+			<label for="phone-number">Numero di telefono:
+				<input type="text" id="phone-number" name="phone-number" pattern="[0-9]{10}">
+			</label>
+		</section>
+		<br>
+		<section id="sign-up-details">
+			<b>Dettagli della registrazione</b>
+			<label for="plan">Scegliere un piano di registrazione:
+				<select id="plan" name="plan">
+					<optgroup label="Piano free">
+						<option value="free">Piano free</option>
+					</optgroup>
+					<optgroup label="Piani a pagamento">
+						<option value="10">Piano a 10 euro al mese</option>
+						<option value="25">Piano a 25 euro al mese</option>
+						<option value="70">Piano a 70 euro al mese</option>
+					</optgroup>
+				</select>
+			</label>
+			<label for="pro">Selezionare la casella per i vantaggi PRO:
+				<input type="checkbox" id="pro" name="pro">
+			</label>
+		</section>
+		<br>
+		<section id="money-details">
+			<b>Dettagli per il pagamento</b>
+			<label for="card-number">Numero di carta di credito:
+				<input type="text" id="card-number" name="card-number" minlength="13" maxlength="16" pattern="[0-9]{13,16}">
+			</label>
+			<label for="card-cvc">CVC della carta di credito:
+				<input type="text" id="card-cvc" name="card-cvc" minlength="3" maxlength="3" pattern="[0-9]{3}">
+			</label>
+			<label for="card-exp">Scadenza della carta di credito:
+				<input type="date" id="card-exp" name="card-exp">
+			</label>
+			<label for="billing-address">Indirizzo di fatturazione:
+				<input type="text" id="billing-address" name="billing-address">
+			</label>
+		</section>
+		<br>
+		<button type=”submit”>Invia il form per registrarti</submit>
+	</form>
+</body>
+
+</html>

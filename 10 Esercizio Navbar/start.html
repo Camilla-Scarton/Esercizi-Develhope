@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Lezione HTML</title>
+
+        <!--Lo stile è per i colori, i padding e i border-->
+        <style>
+            nav {
+                background-color: rgb(67, 126, 213);
+                padding: 1px;
+                border-bottom: 5px solid rgb(0, 0, 0)
+            }
+            li, h3, form {
+                display: inline;
+                padding: 4px
+            }
+            form {
+                padding-left: 50px;
+            }
+            button, select {
+                background-color: rgb(67, 126, 213);
+            }
+            select, button {
+                border: none
+            }
+            button.search {
+                border: solid 1px;
+                padding: 6px;
+                border-radius: 5px
+            }
+            input {
+                border: solid 1px;
+                padding: 6px;
+                border-radius: 5px
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><h3>Navbar</h3></li>
+                <li><a>Home</a></li>
+                <li><a>Link</a></li>
+                <li><select>
+                    <option>Dropdown</option>
+                    <option>Scelta 1</option>
+                    <option>Scelta 2</option>
+                </select></li>
+                <li><button disabled>Disabled</button></li>
+                <li>
+                    <form>
+                        <input placeholder="Search">
+                        <button class="search">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>
