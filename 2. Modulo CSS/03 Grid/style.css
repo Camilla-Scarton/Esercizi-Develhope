@@ -1,0 +1,96 @@
+.calc {
+    display: grid;
+    grid-template-areas: 
+        'result result result result'
+        'operators operators operators operators'
+        'number-7 number-8 number-9 equal-button'
+        'number-4 number-5 number-6 equal-button'
+        'number-1 number-2 number-3 equal-button'
+        'number-0 decimal AC equal-button';
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: rgb(225, 226, 232);
+}
+
+.calc > * {
+    padding: 3px;
+    border: 1px solid rgb(148, 150, 157);
+}
+
+.calc-operators {
+    grid-area: operators;
+    background-color: rgb(198, 197, 212);
+    display: flex;
+}
+
+.calc-operators > * {
+    border: 1px solid rgb(148, 150, 157);
+    flex-grow: 1;
+}
+
+.calc-result {
+    grid-area: result;
+    text-align: right;
+    color: aliceblue;
+    background-color: rgb(56, 58, 67);
+    border-radius: 4px 4px 0 0;
+}
+
+.number-1 {
+    grid-area: number-1;
+}
+
+.number-2 {
+    grid-area: number-2;
+}
+
+.number-3 {
+    grid-area: number-3;
+}
+
+.number-4 {
+    grid-area: number-4;
+}
+
+.number-5 {
+    grid-area: number-5;
+}
+
+.number-6 {
+    grid-area: number-6;
+}
+
+.number-7 {
+    grid-area: number-7;
+}
+
+.number-8 {
+    grid-area: number-8;
+}
+
+.number-9 {
+    grid-area: number-9;
+}
+
+.number-0 {
+    grid-area: number-0;
+}
+
+.decimal-number-button {
+    grid-area: decimal;
+}
+
+.delete-button {
+    grid-area: AC;
+}
+
+.calc-equal-button {
+    grid-area: equal-button;
+    height: 100%;
+    background-color: rgb(230, 124, 124);
+    border-radius: 0 0 4px 0;
+}
