@@ -1,0 +1,64 @@
+.nav {
+    background-color: rgb(39, 38, 46);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-search-form-button:hover {
+    background-color: green;
+    color: white;
+}
+
+.nav-hamburger-menu {
+    background-color: rgb(151, 243, 243);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-hamburger-menu {
+        display: unset;
+        margin: 10px;
+    }
+
+    .nav-links,
+    .nav-search {
+        display: none;
+    }
+}
+
+.nav-title, .nav-links-home {
+    color: white;
+    margin: 1px 10px 1px 10px;
+}
+
+.nav-links-link, .nav-links-dropdown, .nav-links-button {
+    color: rgb(127, 123, 141);
+    margin-right: 5px;
+}
+
+.nav-links-dropdown, .nav-links-button {
+    background-color: transparent;
+    border: none;
+}
+
+.nav-search {
+    margin: 10px;
+}
+
+.nav-search-form-box, .nav-search-form-button {
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.nav-search-form-box {
+    border: 1px solid rgb(127, 123, 141);
+}
+
+.nav-search-form-button {
+    border: 1px solid green;
+    color: green;
+    background-color: transparent;
+}

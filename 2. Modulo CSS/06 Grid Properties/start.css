@@ -1,0 +1,39 @@
+/*Il body è il grid container*/
+body {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "green-one green-one green-one"
+        "yellow-one red-one blue-one"
+        "orange-one orange-one blue-one";
+}
+
+/*Un nome per ogni sezione colorata*/
+#green {
+    grid-area: green-one;
+}
+
+#yellow {
+    grid-area: yellow-one;
+}
+
+#red {
+    grid-area: red-one;
+}
+
+#blue {
+    grid-area: blue-one;
+}
+
+#orange {
+    grid-area: orange-one;
+}
+
+/*Layout delle liste in yellow e red*/
+ul {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+

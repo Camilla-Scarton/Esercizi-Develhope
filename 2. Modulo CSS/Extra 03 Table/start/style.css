@@ -1,0 +1,61 @@
+/* 
+ The table must have a 1px solid border (color #263238) and a width of 50%.
+ The title of the table must have a color (#263238), font-weight bold, font-size 18px and margin bottom (4px).
+ The header must have a background color (#455a64), white text and font weight 700.
+ The rows must have a different background color (one #eceff1 and the other one #b0bec5).
+ The last row of the table must have a font weight of 800 and background color of #78909c
+ In the body of the table the income column must have a text color of #003300.
+ In the body of the table the expenses column must have a text color of #7f0000.
+ The numeric values must have text align right.
+*/
+
+table {
+    width: 50%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #263238;
+}
+
+table > caption {
+    color: #263238;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+table > thead {
+    background-color: #455a64;
+    color: white;
+    font-weight: 700;
+}
+
+table > tbody > tr:nth-child(odd) {
+    background-color: #b0bec5;
+}
+
+table > tbody > tr:nth-child(even) {
+    background-color: #eceff1;
+}
+
+table > tfoot {
+    font-weight: 800;
+    background-color: #78909c;
+}
+
+table > tbody > tr > td:nth-child(2) {
+    color: #003300;
+}
+
+table > tbody > tr > td:nth-child(3) {
+    color: #7f0000;
+}
+
+table > tbody > tr > td:nth-child(2), 
+table > tbody > tr > td:nth-child(3),
+table > tfoot > tr > td:nth-child(2),
+table > tfoot > tr > td:nth-child(3) {
+    text-align: right;
+}

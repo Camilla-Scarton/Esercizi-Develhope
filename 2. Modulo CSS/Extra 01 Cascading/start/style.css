@@ -11,10 +11,18 @@ a {
 }
 
 em {
-  color: darkred;
+  color: rgb(139, 0, 0);
 }
 
 .variant-em {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  font-style: inherit;
+}
+
+.content1 p {
+  border: 1px solid;
 }
 
 ul {
@@ -25,11 +33,26 @@ ul li {
   padding: 16px;
 }
 
+/* 
+  Per i link.
+
+  Sbagliato all: ...;
+
+  Sbagliato background-color: ...;
+            padding: ...;
+*/
+
 .link1 a {
+  color: inherit;
+  padding: inherit;
 }
 
 .link2 a {
+  color: initial;
+  padding: initial;
 }
 
 .link3 a {
+  color: unset;
+  padding: unset;
 }

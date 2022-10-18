@@ -1,13 +1,14 @@
 .calc {
+    width: 80vw;
+    height: 100vh;
+    max-width: 230px;
+    max-height: 205px; 
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-        'result result result result'
-        'plus minus times obelus'
-        'number-7 number-8 number-9 equal-button'
-        'number-4 number-5 number-6 equal-button'
-        'number-1 number-2 number-3 equal-button'
-        'number-0 decimal AC equal-button';
+        'result'
+        'operators'
+        'numbers-and-equal';
 
     /*alignment, style and colors*/
     text-align: center;
@@ -17,11 +18,6 @@
     box-shadow: 4px 4px 5px rgb(191, 208, 213);
 }
 
-.calc > * {
-    padding: 7px;
-    border: 1px solid rgb(148, 150, 157);
-}
-
 .calc-result {
     grid-area: result;
 
@@ -29,26 +25,31 @@
     color: aliceblue;
     background-color: rgb(56, 58, 67);
     border-radius: 4px 4px 0 0;
+    padding: 7px;
 }
 
-.operator-plus {
-    grid-area: plus;
-}
+.calc-operators {
+    grid-area: operators;
 
-.operator-minus {
-    grid-area: minus; 
-}
-
-.operator-times {
-    grid-area: times;
-}
-
-.operator-obelus {
-    grid-area: obelus;
-}
-
-.operator {
     background-color: rgb(198, 197, 212);
+    display: flex;
+}
+
+.calc-operators > * {
+    /*flex: flex-grow flex-shrink flex-basis */
+    flex: 1 1 25%;
+}
+
+.calc-numbers-and-equal {
+    grid-area: numbers-and-equal;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "number-7 number-8 number-9 equal"
+        "number-4 number-5 number-6 equal"
+        "number-1 number-2 number-3 equal"
+        "number-0 decimal AC equal"
 }
 
 .number-1 {
@@ -101,7 +102,7 @@
 }
 
 .calc-equal-button {
-    grid-area: equal-button;
+    grid-area: equal;
 
     background-color: rgb(230, 124, 124);
     border-radius: 0 0 4px 0;
@@ -111,4 +112,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.calc-operators > *,
+.calc-numbers-and-equal > * {
+    padding: 7px;
+    border: 1px solid rgb(148, 150, 157);
 }
