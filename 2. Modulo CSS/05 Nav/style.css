@@ -71,23 +71,22 @@ html {
     background-color: transparent;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .nav-hamburger-menu {
         display: none;
     }
 }
 
-@media (min-width: 768px) {
-    .nav {
-        visibility: hidden;
-    }
-
-    .nav-title {
-        visibility: visible;
-        color:rgb(39, 38, 46);
+@media (max-width: 768px) {
+    .nav > * {
+        display: none;
     }
 
     .nav-title, .nav-hamburger-menu {
-        display: initial;
+        display: unset;
+    }
+
+    .icon-menu {
+        color: white;
     }
 }
