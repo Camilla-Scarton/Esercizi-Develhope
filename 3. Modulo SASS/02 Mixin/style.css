@@ -1,11 +1,10 @@
 .exercise {
-  max-width: 852px;
+  max-width: 1055px;
   margin: 0 auto;
   border: 1px solid red;
   padding: 10px;
 }
 .exercise .exercise-title {
-  font-size: 20px;
   color: green;
   text-decoration: 1px underline blue;
   text-underline-offset: 8px;
@@ -15,16 +14,27 @@
 
 .articles-section {
   display: flex;
+  padding-bottom: 10px;
 }
 .articles-section .article_1, .articles-section .article_3 {
   color: blue;
+  border: 1.5px solid green;
+  font-size: smaller;
+  text-align: center;
+  padding: 10px;
 }
 .articles-section .article_2, .articles-section .article_4 {
   color: red;
-}
-.articles-section .article_1, .articles-section .article_2, .articles-section .article_3, .articles-section .article_4 {
   border: 1.5px solid green;
-  font-size: 10px;
+  font-size: smaller;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-section {
+  color: green;
+  border: 1.5px solid blue;
+  font-size: 20px;
   text-align: center;
   padding: 10px;
 }

@@ -3,9 +3,12 @@ $color-secondary: blue;
 $color-tertiary: green;
 
 .exercise {
+    max-width: 852px;
+    margin: 0 auto;
     border: 1px solid $color-primary;
     padding: 10px;
     .exercise-title {
+        font-size: 20px;
         color: $color-tertiary;
         text-decoration: 1px underline $color-secondary;
         text-underline-offset: 8px;
@@ -25,7 +28,7 @@ $color-tertiary: green;
         }
         &_1, &_2, &_3, &_4 {
             border: 1.5px solid $color-tertiary;
-            font-size: small;
+            font-size: 10px;
             text-align: center;
             padding: 10px;
         }

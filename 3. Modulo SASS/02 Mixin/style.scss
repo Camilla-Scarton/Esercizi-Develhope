@@ -1,0 +1,38 @@
+@mixin article-card($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border: 1.5px solid $border-color;
+    font-size: $font-size;
+    text-align: center;
+    padding: 10px;
+}
+
+.exercise {
+    max-width: 1055px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 10px;
+    .exercise-title {
+        color: green;
+        text-decoration: 1px underline blue;
+        text-underline-offset: 8px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+.articles-section {
+    display: flex;
+    padding-bottom: 10px;
+    .article {
+        &_1, &_3 {
+            @include article-card(blue, green, smaller);
+        }
+        &_2, &_4 {
+            @include article-card(red, green, smaller);
+        }
+    }
+}
+
+.footer-section {
+    @include article-card(green, blue, 20px);
+}
