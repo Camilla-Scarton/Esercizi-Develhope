@@ -51,7 +51,9 @@
     flex-direction: row;
     justify-content: space-between;
 
-    @for $index from 1 through 3 {
+    $index-array: 1, 2, 3;
+
+    @each $index in $index-array {
         .fs-#{$index}rem {
             width: f.rem(45px);
             height: f.rem(45px);
