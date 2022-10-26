@@ -1,0 +1,174 @@
+.exercise {
+  max-width: 65.9375rem;
+  margin: 0 auto;
+  border: 0.0625rem solid red;
+  padding: 0.625rem;
+  text-align: center;
+}
+.exercise .exercise-title-1, .exercise .exercise-title-2 {
+  color: green;
+  text-decoration: 0.0625rem underline blue;
+  text-underline-offset: 0.5rem;
+  margin-bottom: 0.9375rem;
+}
+.exercise .exercise-title-2 {
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+  border: 0.0625rem solid red;
+}
+
+.articles-section {
+  display: flex;
+  padding-bottom: 0.625rem;
+}
+.articles-section .article_1, .articles-section .article_3 {
+  color: blue;
+  border: 0.09375rem solid green;
+  font-size: smaller;
+  text-align: center;
+  padding: 0.625rem;
+}
+.articles-section .article_2, .articles-section .article_4 {
+  color: red;
+  border: 0.09375rem solid green;
+  font-size: smaller;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+.squares-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.squares-section .fs-1rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  font-size: 1rem;
+  border: 0.0625rem solid red;
+  margin-bottom: 0.625rem;
+}
+.squares-section .fs-2rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  font-size: 2rem;
+  border: 0.0625rem solid red;
+  margin-bottom: 0.625rem;
+}
+.squares-section .fs-3rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  font-size: 3rem;
+  border: 0.0625rem solid red;
+  margin-bottom: 0.625rem;
+}
+.squares-section :nth-child(1) {
+  text-align: left;
+  color: #0d0d0d;
+  background-color: #f2f2f2;
+}
+.squares-section :nth-child(2) {
+  text-align: left;
+  color: #1a1a1a;
+  background-color: #e6e6e6;
+}
+.squares-section :nth-child(3) {
+  text-align: left;
+  color: #262626;
+  background-color: #d9d9d9;
+}
+.squares-section :nth-child(4) {
+  text-align: left;
+  color: #333333;
+  background-color: #cccccc;
+}
+.squares-section :nth-child(5) {
+  text-align: left;
+  color: #404040;
+  background-color: #bfbfbf;
+}
+.squares-section :nth-child(6) {
+  text-align: left;
+  color: #4d4d4d;
+  background-color: #b3b3b3;
+}
+.squares-section :nth-child(7) {
+  text-align: left;
+  color: #595959;
+  background-color: #a6a6a6;
+}
+.squares-section :nth-child(8) {
+  text-align: left;
+  color: #666666;
+  background-color: #999999;
+}
+.squares-section :nth-child(9) {
+  text-align: left;
+  color: #737373;
+  background-color: #8c8c8c;
+}
+.squares-section :nth-child(10) {
+  text-align: left;
+  color: gray;
+  background-color: gray;
+}
+.squares-section :nth-child(10) {
+  color: red;
+  background-color: blue;
+}
+.squares-section :nth-child(11) {
+  text-align: left;
+  color: #8c8c8c;
+  background-color: #737373;
+}
+.squares-section :nth-child(12) {
+  text-align: left;
+  color: #999999;
+  background-color: #666666;
+}
+.squares-section :nth-child(13) {
+  text-align: left;
+  color: #a6a6a6;
+  background-color: #595959;
+}
+.squares-section :nth-child(14) {
+  text-align: left;
+  color: #b3b3b3;
+  background-color: #4d4d4d;
+}
+.squares-section :nth-child(15) {
+  text-align: left;
+  color: #bfbfbf;
+  background-color: #404040;
+}
+.squares-section :nth-child(16) {
+  text-align: left;
+  color: #cccccc;
+  background-color: #333333;
+}
+.squares-section :nth-child(17) {
+  text-align: left;
+  color: #d9d9d9;
+  background-color: #262626;
+}
+.squares-section :nth-child(18) {
+  text-align: left;
+  color: #e6e6e6;
+  background-color: #1a1a1a;
+}
+.squares-section :nth-child(19) {
+  text-align: left;
+  color: #f2f2f2;
+  background-color: #0d0d0d;
+}
+
+.footer-section {
+  color: green;
+  border: 0.09375rem solid blue;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+/*# sourceMappingURL=style.css.map */
