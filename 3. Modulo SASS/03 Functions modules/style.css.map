@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["style.scss","Modules/green.scss","Modules/blue.scss","Modules/red.scss"],"names":[],"mappings":"AAaA;EACI;EACA;EACA;EACA;;AACA;EACI,OCnBS;EDoBT;EACA;EACA;EACA;;;AAIR;EACI;EACA;;AAEI;EAzBJ,OENc;EFOd;EACA,WAwBqE;EAvBrE;EACA;;AAwBI;EA5BJ,OGNY;EHOZ;EACA,WA2BmE;EA1BnE;EACA;;;AA8BJ;EAlCI,OCNa;EDOb;EACA,WAiC6D;EAhC7D;EACA","file":"style.css"}

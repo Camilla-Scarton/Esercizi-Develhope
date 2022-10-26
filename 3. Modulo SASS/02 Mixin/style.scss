@@ -6,14 +6,18 @@
     padding: 10px;
 }
 
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
 .exercise {
     max-width: 1055px;
     margin: 0 auto;
-    border: 1px solid red;
+    border: 1px solid $color-primary;
     padding: 10px;
     .exercise-title {
-        color: green;
-        text-decoration: 1px underline blue;
+        color: $color-tertiary;
+        text-decoration: 1px underline $color-secondary;
         text-underline-offset: 8px;
         margin-bottom: 15px;
         text-align: center;
@@ -25,14 +29,14 @@
     padding-bottom: 10px;
     .article {
         &_1, &_3 {
-            @include article-card(blue, green, smaller);
+            @include article-card($color-secondary, $color-tertiary, smaller);
         }
         &_2, &_4 {
-            @include article-card(red, green, smaller);
+            @include article-card($color-primary, $color-tertiary, smaller);
         }
     }
 }
 
 .footer-section {
-    @include article-card(green, blue, 20px);
+    @include article-card($color-tertiary, $color-secondary, 20px);
 }

@@ -1,0 +1,43 @@
+@use "Modules/red.scss" as r;
+@use "Modules/green.scss" as g;
+@use "Modules/blue.scss" as b;
+@use "Modules/rem-function.scss" as f;
+
+@mixin article-card($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border: f.rem(1.5px) solid $border-color;
+    font-size: $font-size;
+    text-align: center;
+    padding: f.rem(10px);
+}
+
+.exercise {
+    max-width: f.rem(1055px);
+    margin: 0 auto;
+    border: f.rem(1px) solid r.$color-primary;
+    padding: f.rem(10px);
+    .exercise-title {
+        color: g.$color-tertiary;
+        text-decoration: f.rem(1px) underline b.$color-secondary;
+        text-underline-offset: f.rem(8px);
+        margin-bottom: f.rem(15px);
+        text-align: center;
+    }
+}
+
+.articles-section {
+    display: flex;
+    padding-bottom: f.rem(10px);
+    .article {
+        &_1, &_3 {
+            @include article-card(b.$color-secondary, g.$color-tertiary, smaller);
+        }
+        &_2, &_4 {
+            @include article-card(r.$color-primary, g.$color-tertiary, smaller);
+        }
+    }
+}
+
+.footer-section {
+    @include article-card(g.$color-tertiary, b.$color-secondary, f.rem(20px));
+}
