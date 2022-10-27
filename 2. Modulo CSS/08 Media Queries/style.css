@@ -1,0 +1,123 @@
+/* Fino a 375px siamo su mobile */
+@media (max-width: 375px) {
+    .card-wrap, .card-img {
+        width: 80vw;
+    }
+
+    body {
+        justify-content: center;
+    }
+
+    .card-wrap {
+        margin-bottom: 1vw;
+    }
+}
+
+/* Da 375px a 768px siamo su tablet */
+@media (min-width: 375px) and (max-width: 768px) {
+    .card-wrap, .card-img {
+        width: 45vw;
+    }
+
+    .card-wrap {
+        margin-left: 1vw;
+        margin-bottom: 1vw;
+    }
+}
+
+/* Passati i 768px siamo su desktop */
+@media (min-width: 768px) {
+    .card-wrap, .card-img {
+        width: 30vw;
+    }
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.card-wrap {
+    background-color: rgb(205, 196, 196);
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px rgb(110, 126, 131);
+    max-width: 310px;
+    min-width: 220px;
+}
+
+.card-header {
+    background-color: rgb(153, 148, 148);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header-text {
+    flex-grow: 2;
+}
+
+.ball {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 100px;
+    margin: 5px;
+}
+
+.card-title, .img-date {
+    margin: 5px;
+}
+
+.icon-3-points {
+    background-color: transparent;
+    border: none;
+}
+
+img {
+    width: 100%;
+}
+
+.card-img {
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.icon-social {
+    display: flex;
+    gap: 5px;
+}
+
+
+/* Sistemazione foto*/
+.img-Mato-tappeto {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.img-Mato-pagnottina {
+    margin: -35% 0 0 0;
+}
+
+.img-Mato-illegale-1, .img-Mato-illegale-2 {
+    width: 60%;
+}
+
+.img-Mato-illegale-2 {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+}

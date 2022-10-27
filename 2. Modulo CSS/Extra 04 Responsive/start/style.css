@@ -1,0 +1,97 @@
+body {
+    background-color: #fafbff;
+    margin: 0px;
+
+}main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "nav nav"
+        "article side";
+}
+
+nav {
+    grid-area: nav;
+    background-color: #234567;
+    padding: 23px;
+}
+
+nav a {
+    color: #fafbff;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 8px;
+}
+
+nav a:hover {
+    color: #ff784d;
+    text-decoration: none;
+}
+
+article {
+    grid-area: article;
+    min-width: 816px;
+}
+
+article img {
+    min-height: 267px;
+    max-width: 400px;
+    float: left;
+}
+
+.sidebar {
+    grid-area: side;
+    background-color: #edefff;
+}
+
+.sidebar img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+footer {
+    background-color: #012345;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer form {
+    color: white;
+    padding: 15px;
+}
+
+footer form button {
+    color: white;
+    background-color: #ff784d;
+    transition: all 0.4s;
+}
+
+footer form button:hover {
+    color: #ff784d;
+    background-color: white;
+}
+
+article, .sidebar, footer {
+    padding: 8px 16px 8px 16px;
+}  
+
+@media (max-width: 900px) {
+    main {
+        grid-template-areas: 
+            "nav nav"
+            "article article"
+            "side side";
+    }
+    article {
+        min-width: auto;
+    }
+    article img {
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    .sidebar {
+        padding-top: 16px;
+        padding-bottom: 32px;
+    }
+}

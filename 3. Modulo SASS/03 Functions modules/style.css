@@ -1,0 +1,42 @@
+.exercise {
+  max-width: 65.9375rem;
+  margin: 0 auto;
+  border: 0.0625rem solid red;
+  padding: 0.625rem;
+}
+.exercise .exercise-title {
+  color: green;
+  text-decoration: 0.0625rem underline blue;
+  text-underline-offset: 0.5rem;
+  margin-bottom: 0.9375rem;
+  text-align: center;
+}
+
+.articles-section {
+  display: flex;
+  padding-bottom: 0.625rem;
+}
+.articles-section .article_1, .articles-section .article_3 {
+  color: blue;
+  border: 0.09375rem solid green;
+  font-size: smaller;
+  text-align: center;
+  padding: 0.625rem;
+}
+.articles-section .article_2, .articles-section .article_4 {
+  color: red;
+  border: 0.09375rem solid green;
+  font-size: smaller;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+.footer-section {
+  color: green;
+  border: 0.09375rem solid blue;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+/*# sourceMappingURL=style.css.map */

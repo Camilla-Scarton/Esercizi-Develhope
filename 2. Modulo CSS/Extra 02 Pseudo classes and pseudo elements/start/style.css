@@ -1,0 +1,46 @@
+
+blockquote {
+	background-color: rgba(0, 0, 0, .12);
+	padding: 8px;
+}
+
+a {
+	color: darkred;
+	text-decoration: none;
+}
+
+/* Senza classe, potevo scrivere: h1 + p::... */
+.first-paragraph::first-letter {
+	float: left;
+	color: darkred;
+	border: 3px ridge darkgoldenrod;
+	padding: 16px;
+	background-color: gold;
+	margin: 8px;
+}
+
+blockquote::before {
+	content: '"';
+	font-weight: bold;
+	color: blue;
+	padding: 4px;
+	font-size: xx-large;
+}
+
+blockquote::after {
+	content: '"';
+	font-weight: bold;
+	color: blue;
+	padding: 4px;
+	font-size: xx-large;
+}
+
+a:hover {
+	background-color: black;
+	color: white;
+}
+
+/* Per far diventare il link blu, è necessario anche a:focus */
+a:visited, a:focus {
+	color: rgb(74, 32, 240);
+}

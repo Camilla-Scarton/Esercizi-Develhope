@@ -1,0 +1,32 @@
+.exercise {
+  max-width: 852px;
+  margin: 0 auto;
+  border: 1px solid red;
+  padding: 10px;
+}
+.exercise .exercise-title {
+  font-size: 20px;
+  color: green;
+  text-decoration: 1px underline blue;
+  text-underline-offset: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.articles-section {
+  display: flex;
+}
+.articles-section .article_1, .articles-section .article_3 {
+  color: blue;
+}
+.articles-section .article_2, .articles-section .article_4 {
+  color: red;
+}
+.articles-section .article_1, .articles-section .article_2, .articles-section .article_3, .articles-section .article_4 {
+  border: 1.5px solid green;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

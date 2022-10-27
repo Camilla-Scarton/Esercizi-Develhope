@@ -1,0 +1,7 @@
+// 1rem is equal to 16px
+
+@use "sass:math";
+
+@function rem($px) {
+    @return math.div($px, 16px) + rem;
+}
