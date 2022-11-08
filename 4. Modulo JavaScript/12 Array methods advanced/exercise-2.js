@@ -1,6 +1,17 @@
+// Soluzione con map
 function nicknameMap(persons) {
-  // ...
+  let nicknamesArray = persons.map((el) => el.name + "-" + el.age);
+  return nicknamesArray;
 }
+
+// Soluzione con forEach/push
+// function nicknameMap(persons) {
+//   let nicknamesArray = [];
+//   persons.forEach((el) => {
+//     nicknamesArray.push(el.name + "-" + el.age);
+//   });
+//   return nicknamesArray;
+// }
 
 const persons = [
   { name: 'Paul', age: 16 },

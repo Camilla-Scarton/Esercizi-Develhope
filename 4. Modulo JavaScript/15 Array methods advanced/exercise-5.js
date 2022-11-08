@@ -1,4 +1,5 @@
 function sortPeopleByAge(arr) {
+  people.forEach((el) => el.age)
   
 }
 
