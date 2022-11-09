@@ -18,7 +18,20 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  static calculate(figure) {
+
+    let squareArea = figure?.side * figure?.side;
+    let squareRectangle = figure?.width * figure?.height;
+    let squareCircle = Math.PI * figure?.radius * figure?.radius;
+    
+    if (squareArea) {
+      return squareArea;
+    } else if (squareRectangle) {
+      return squareRectangle;
+    } else if (squareCircle) {
+      return squareCircle;
+    }
+  }
 }
 
 const square = new Square(4);
