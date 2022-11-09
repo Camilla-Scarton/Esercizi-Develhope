@@ -4,15 +4,6 @@ function nicknameMap(persons) {
   return nicknamesArray;
 }
 
-// Soluzione con forEach/push
-// function nicknameMap(persons) {
-//   let nicknamesArray = [];
-//   persons.forEach((el) => {
-//     nicknamesArray.push(el.name + "-" + el.age);
-//   });
-//   return nicknamesArray;
-// }
-
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -29,3 +20,13 @@ const persons = [
 const nicknames = nicknameMap(persons);
 console.log(persons);
 console.log(nicknames);
+
+
+// Soluzione con forEach/push
+// function nicknameMap(persons) {
+//   let nicknamesArray = [];
+//   persons.forEach((el) => {
+//     nicknamesArray.push(el.name + "-" + el.age);
+//   });
+//   return nicknamesArray;
+// }

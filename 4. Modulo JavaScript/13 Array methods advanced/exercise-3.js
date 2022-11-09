@@ -1,23 +1,15 @@
+// Soluzione con reduce e Math.round
 function calculateAverageAge(persons) {
-  let averageAge = 0;
-  let personsNum = persons.length;
-  persons.forEach((x) => {
-    averageAge = averageAge + x.age;
-    return averageAge;
-  })
-  return averageAge / personsNum;
-}
+  // Creo un array dove salvare tutte le età
+  let ageArr = [];
+  persons.forEach((el) => ageArr.push(el.age));
 
-// Soluzione senza reduce
-// function calculateAverageAge(persons) {
-//   let averageAge = 0;
-//   let personsNum = persons.length;
-//   persons.forEach((x) => {
-//     averageAge = averageAge + x.age;
-//     return averageAge;
-//   })
-//   return averageAge / personsNum;
-// }
+  // Calcolo la somma delle età e poi la media approssimata 
+  let sumAge = ageArr.reduce((previousValue, currentValue) => previousValue + currentValue);
+  let averageAgeApprox = Math.round(sumAge / ageArr.length);
+
+  return averageAgeApprox;
+}
 
 const persons = [
   { name: 'Paul', age: 16 },
@@ -35,3 +27,15 @@ const persons = [
 const average = calculateAverageAge(persons);
 console.log(persons);
 console.log(average);
+
+
+// Soluzione senza reduce
+// function calculateAverageAge(persons) {
+//   let averageAge = 0;
+//   let personsNum = persons.length;
+//   persons.forEach((x) => {
+//     averageAge = averageAge + x.age;
+//     return averageAge;
+//   })
+//   return Math.round(averageAge / personsNum);
+// }

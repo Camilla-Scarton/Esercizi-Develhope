@@ -1,27 +1,29 @@
+// L'input notes è un array di oggetti: notes = [{...}, {...}].
+// Ogni oggetto dentro notes ha una chiave todo associata ad un valore che è un array di oggetti e quindi è del tipo:
+// {..., todo: [{...}, {...}] } dove in ogni {...} si ha una chiave done con valore true o false.
 function uncompletedNotes(notes) {
-  // L'input notes è un array di oggetti: notes = [{...}, {...}].
-  // Ogni oggetto dentro notes ha una chiave todo associata ad un valore che è un array di oggetti e quindi è del tipo:
-  // {..., todo: [{...}, {...}] } dove in ogni {...} si ha una chiave done con valore true o false.
-
-  // La funzione searchTodo() crea un nuovo array su cui si aggiungono i vari valori di todo
+  
+  // La funzione searchTodos() crea un nuovo array su cui si aggiungono i vari valori di todo
+  // A partire da un input della struttura di notes
+  // L'output è del tipo [ [{..., done: ...}, {..., done: ...}] , [{..., done: ...}, {..., done: ...}] ] con tutti i valori dei todo
   function searchTodos(arr) {
     let todosArr = [];
     arr.forEach((el) => todosArr.push(el.todos));
     return todosArr;
-    // L'output è del tipo [ [{...}, {...}] , [{...}, {...}] con tutti i valori dei todo
   }
 
-  // La funzione searchDoneFalse prende in input l'output della funzione precedente e lo filtra per tenere i todo da completare
+  // La funzione searchDoneFalse() filtra gli elementi dell'input per tenere i todo da completare
+  // Prende in input l'output della funzione precedente
+  // L'output è del tipo [ [{..., done: false}, ...] , [{..., done: false}, ...] ] con solo i valori dei todo da completare
   function searchDoneFalse(arr) {
-    let filteredTodosArr = []; // Array in cui salvare i todo da completare
+    let filteredTodosArr = [];
     arr.forEach((el) => {
-      // Sono filtrati gli oggetti dentro i vari array che sono elementi dell'array in input
+      // Si filtrano gli oggetti dentro i vari array a loro volta elementi dell'array in input
       let filteredTodos = el.filter((todo) => todo.done == false); 
       // Una volta filtrati, gli elementi rimasti sono gli elementi dell'array aggiunto all'array dei todo da completare
       filteredTodosArr.push(filteredTodos);
     });
     return filteredTodosArr;
-    // L'output è del tipo [ [{...}, {...}] , [{...}, {...}] con solo i valori dei todo da completare
   }
 
   let todosArr = searchTodos(notes); // Dall'input estraggo i todo
@@ -30,6 +32,7 @@ function uncompletedNotes(notes) {
   return todosDoneFalseArr;
   // L'output è del tipo [ [{...}, {...}], [{...}, {...}] ] dove ogni elemento dell'array è il valore del todo con solo i non completati  
 
+  
   /* Output alternativo:
   // Creo una copia dell'array in input per poi andare ad aggiornarla
   let uncompleted = notes.map((x) => x);
@@ -37,7 +40,6 @@ function uncompletedNotes(notes) {
   // Aggiorno l'input di partenza, aggiornando i valori dei todo lasciando solo i todo da completare
   for (let i = 0; i < uncompleted.length; i++) {
     uncompleted[i].todos = todosDoneFalseArr[i];
-    console.log(uncompleted[i].todos);
   }
   return uncompleted; //L'output ha la stessa struttura dell'input */
 }

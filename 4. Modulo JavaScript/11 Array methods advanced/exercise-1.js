@@ -4,17 +4,6 @@ function adultFilter(persons) {
   return adults;
 }
 
-// Soluzione con forEach/push
-// function adultFilter(persons) {
-//   let adultsArray = [];
-//   persons.forEach((el) => {
-//     if (el.age >= 18) {
-//       adultsArray.push(el);
-//     }
-//   });
-//   return adultsArray;
-// }
-
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -31,3 +20,15 @@ const persons = [
 const adults = adultFilter(persons);
 console.log(persons);
 console.log(adults);
+
+
+// Soluzione con forEach/push
+// function adultFilter(persons) {
+//   let adultsArray = [];
+//   persons.forEach((el) => {
+//     if (el.age >= 18) {
+//       adultsArray.push(el);
+//     }
+//   });
+//   return adultsArray;
+// }
