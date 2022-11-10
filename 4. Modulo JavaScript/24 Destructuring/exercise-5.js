@@ -5,5 +5,6 @@ const person = {
   age: 25
 };
 
-const { id, name, surname, old } = person;
-console.log(id, name, surname, old);
+// NB: sempre usare la chiave preesistente come nome della variabile associata nella destrutturazione
+const { id, firstName, lastName, age } = person;
+console.log(id, firstName, lastName, age);
