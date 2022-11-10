@@ -5,9 +5,12 @@ const person = {
   age: 25
 };
 
-const id = person.id;
-const firstName = person.firstName;
-const lastName = person.lastName;
-const age = person.age;
+// Sostituisco da riga 9 a riga 12 con riga 14
+// const id = person.id;
+// const firstName = person.firstName;
+// const lastName = person.lastName;
+// const age = person.age;
+
+const {id, firstName, lastName, age} = person;
 
 console.log(id, firstName, lastName, age);
