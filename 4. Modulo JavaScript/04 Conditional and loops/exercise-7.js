@@ -12,6 +12,11 @@ function sumUntil(maxValue) {
       i++;
     }
     */
+    /*
+    for (let i = 0; i <= maxValue; i++) {
+      sum = sum + i;
+    }
+    */
     return sum;
   } else if (maxValue == 0) {
     return sum;
