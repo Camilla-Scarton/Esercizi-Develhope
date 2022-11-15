@@ -24,13 +24,10 @@ class AreaCalculator {
     let squareRectangle = figure?.width * figure?.height;
     let squareCircle = Math.PI * figure?.radius * figure?.radius;
     
-    if (squareArea) {
-      return squareArea;
-    } else if (squareRectangle) {
-      return squareRectangle;
-    } else if (squareCircle) {
-      return squareCircle;
-    }
+    if (squareArea) return squareArea;
+    if (squareRectangle) return squareRectangle;
+    if (squareCircle) return squareCircle;
+    
   }
 }
 

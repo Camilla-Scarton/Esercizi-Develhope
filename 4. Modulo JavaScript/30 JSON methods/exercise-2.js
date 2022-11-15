@@ -13,8 +13,8 @@ class Person {
   static fromJson(str) {
     // Ritorno ad un oggetto dove le chiavi non sono più stringhe
     let personObj = JSON.parse(str); 
-    // Prendo le chiavi di personObj e le passo alla classe come input singoli
-    return new Person(...Object.keys(personObj)); 
+    // Prendo i valori di personObj e li passo alla classe come input singoli
+    return new Person(...Object.values(personObj)); 
   }
 }
 
