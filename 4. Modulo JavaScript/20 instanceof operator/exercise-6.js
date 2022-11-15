@@ -17,19 +17,16 @@ class Circle {
   }
 }
 
+// Soluzione con instanceof
 class AreaCalculator {
   static calculate(figure) {
-
-    let squareArea = figure?.side * figure?.side;
-    let squareRectangle = figure?.width * figure?.height;
-    let squareCircle = Math.PI * figure?.radius * figure?.radius;
-    
-    if (squareArea) return squareArea;
-    if (squareRectangle) return squareRectangle;
-    if (squareCircle) return squareCircle;
-    
+    if (figure instanceof Square) return figure.side * figure.side;
+    if (figure instanceof Rectangle) return figure.width * figure.height;
+    if (figure instanceof Circle) return Math.PI * figure.radius * figure.radius;
+    return "not a square, a rectangle or a circle";
   }
 }
+
 
 const square = new Square(4);
 const rectangle = new Rectangle(4, 2);
@@ -38,3 +35,22 @@ const circle = new Circle(5);
 console.log(AreaCalculator.calculate(square));
 console.log(AreaCalculator.calculate(rectangle));
 console.log(AreaCalculator.calculate(circle));
+console.log(AreaCalculator.calculate(4));
+
+
+
+// Soluzione funzionante senza instanceof, ma con spreco di memoria
+//
+// class AreaCalculator {
+//   static calculate(figure) {
+//
+//     let squareArea = figure?.side * figure?.side;
+//     let squareRectangle = figure?.width * figure?.height;
+//     let squareCircle = Math.PI * figure?.radius * figure?.radius;
+//    
+//     if (squareArea) return squareArea;
+//     if (squareRectangle) return squareRectangle;
+//     if (squareCircle) return squareCircle;
+//    
+//   }
+// }
