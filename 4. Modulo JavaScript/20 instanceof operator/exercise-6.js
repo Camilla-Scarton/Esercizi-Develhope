@@ -40,6 +40,8 @@ console.log(AreaCalculator.calculate(4));
 
 
 // Soluzione funzionante senza instanceof, ma con spreco di memoria
+// (Soluzione NON funzionante per il triangolo! D: Si ritornerebbe l'area come width*height)
+// (Soluzione che darebbe problemi con i volumi dei solidi anche... es. parallelepipedo)
 //
 // class AreaCalculator {
 //   static calculate(figure) {
