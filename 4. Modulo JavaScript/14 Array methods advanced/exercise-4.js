@@ -1,22 +1,22 @@
 // Soluzione sapendo quanti elementi ha l'input
 // function uncompletedNotes([group1, group2]) { // Destrutturo subito l'array in entrata
 
-//   // Tengo solo i todos con "done: false"
-//   let todos1filtered = group1.todos.filter((el) => el.done == false);
-//   let todos2filtered = group2.todos.filter((el) => el.done == false);
+//   let todosArr = []; // Array per salvare gli elementi dei todos con "done: false"
 
-//   return [todos1filtered, todos2filtered]; // Restituisco i todos che rimangono da fare
+//   // Tengo solo i todos con "done: false" e li aggiungo in todosArr
+//   todosArr.push(group1.todos.filter((el) => el.done == false));
+//   todosArr.push(group2.todos.filter((el) => el.done == false));
+
+//   return todosArr; // Restituisco i todos che rimangono da fare
 // }
 
 // Soluzione NON sapendo quanti elementi ha l'input 
-function uncompletedNotes(notes) { 
+function uncompletedNotes(notes) {
   
-  let groups = [...notes]; // Destrutturo l'array in entrata
-  
-  let todosArr = []; // Array per salvare i todos con false
+  let todosArr = []; // Array per salvare gli elementi dei todos con "done: false"
 
   // Tengo solo gli oggetti nei todos con "done: false" usando filter e poi li aggiungo in todosArr
-  groups.forEach((e) => todosArr.push(e.todos.filter((el) => el.done == false)));
+  notes.forEach((e) => todosArr.push(e.todos.filter((el) => el.done == false)));
 
   return todosArr; // Restituisco l'array dei todos con false
 }
