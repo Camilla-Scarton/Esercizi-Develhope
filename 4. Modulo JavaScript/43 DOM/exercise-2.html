@@ -20,5 +20,16 @@
 </html>
 
 <script>
-  // code here
+  // Solution with class as selector
+  let $formInput = document.getElementsByClassName("form-input");
+  // La condizione dell'if permette di saltare la stampa di "25" che ha type="number".
+  for (let i = 0; i < $formInput.length; i++) {
+    if ($formInput[i]["type"] == "text") console.log($formInput[i]["value"]);
+  }
+
+  // Solution with precise selector
+  // let $formTextInput = document.querySelectorAll('input.form-input[type="text"]');
+  // for (let i = 0; i < $formTextInput.length; i++) {
+  //   console.log($formTextInput[i]["value"]);
+  // }
 </script>

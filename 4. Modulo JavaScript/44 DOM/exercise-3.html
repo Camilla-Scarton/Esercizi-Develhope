@@ -20,5 +20,10 @@
 </html>
 
 <script>
-  // code here
+  const $labels = document.getElementsByTagName("label");
+  const $formInputs = document.getElementsByClassName("form-input");
+  
+  for (let i = 0; i < $labels.length; i++) {
+    console.log($labels[i]["innerHTML"] + " " + $formInputs[i]["value"]);
+  }
 </script>
