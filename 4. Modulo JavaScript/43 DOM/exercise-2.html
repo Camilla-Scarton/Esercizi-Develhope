@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Solution with class as selector
+  let $formInput = document.getElementsByClassName("form-input");
+  // La condizione dell'if permette di saltare la stampa di "25" che ha type="number".
+  for (let i = 0; i < $formInput.length; i++) {
+    if ($formInput[i]["type"] == "text") console.log($formInput[i]["value"]);
+  }
+
+  // Solution with precise selector
+  // let $formTextInput = document.querySelectorAll('input.form-input[type="text"]');
+  // for (let i = 0; i < $formTextInput.length; i++) {
+  //   console.log($formTextInput[i]["value"]);
+  // }
+</script>
