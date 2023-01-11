@@ -1,0 +1,3 @@
+State 02
+
+When calling `setState` to increment the counter, should the parameter be a function or an object? Why?

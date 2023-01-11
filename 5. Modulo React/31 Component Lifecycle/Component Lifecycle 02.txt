@@ -1,0 +1,3 @@
+Component Lifecycle 02
+
+Modify the `Counter` component so that the interval is cleared whenever the component is unmounted. What lifecycle method should you use?
