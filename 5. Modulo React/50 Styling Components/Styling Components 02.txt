@@ -1,0 +1,1 @@
+Modify the `Counter` component from 7.1 by styling the counter display using an inline `style` attribute.

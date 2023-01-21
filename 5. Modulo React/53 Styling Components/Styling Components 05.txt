@@ -1,0 +1,1 @@
+Install the `react-bootstrap` package and use it to style the `ClickCounter` component.
