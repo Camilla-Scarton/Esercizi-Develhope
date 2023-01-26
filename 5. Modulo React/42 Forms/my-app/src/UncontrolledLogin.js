@@ -10,6 +10,12 @@ export class UncontrolledLogin extends Component {
     // _formRef is the object returned by createRef(), with a current key.
     _formRef = createRef(); // Adding ref={this._formRef} in <form>, we can use _formRef as a reference to the form
 
+    // to make username input autofocused on first render (without cheating using autoFocus directly on <input> in render function)
+    _usernameInputRef = createRef();
+    componentDidMount() {
+        this._usernameInputRef.current.focus();
+    }
+
     // function to console.log form values, from submit button
     handleForm = (event) => {
         // To avoid submit
@@ -66,7 +72,7 @@ export class UncontrolledLogin extends Component {
                     <p>Inputs are uncontrolled because their value is NOT linked to the state.</p>
                     <p>We access values from DOM elements directly.</p>
                     <form ref={this._formRef} onSubmit={this.handleForm}>
-                        <input name="username" type="text" defaultValue="" onChange={this.setButton} autoFocus></input>
+                        <input ref={this._usernameInputRef} name="username" type="text" defaultValue="" onChange={this.setButton}></input>
                         <input name="password" type="password" defaultValue="" onChange={this.setButton}></input>
                         <input name="remember" type="checkbox" defaultValue={false}></input>
                         <div>
