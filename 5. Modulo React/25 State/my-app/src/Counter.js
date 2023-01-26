@@ -1,12 +1,12 @@
-import React from "react"
+import { Component } from "react"
 
-export class Counter extends React.Component {
+export class Counter extends Component {
     constructor(props) {
 		super(props)
+
 		this.state = {
 			count: 0,
 		}
-        // or directly state = { count: 0 }
 
         setInterval(() => {
             this.setState({
