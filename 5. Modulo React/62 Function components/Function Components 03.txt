@@ -1,0 +1,1 @@
+What happens if the `numbers` prop of the `Sum` component is not set? How can you set a default value for this prop?

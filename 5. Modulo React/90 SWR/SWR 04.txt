@@ -1,0 +1,1 @@
+Use `SWRConfig` to set a default value for the `fetcher` prop of the `useSWR` hook.
