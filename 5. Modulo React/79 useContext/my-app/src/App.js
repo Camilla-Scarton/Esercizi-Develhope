@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
-function App() {
+export function App() {
+  const [language, setLanguage] = useState("English");
+
+  function handleSelect(event) {
+    setLanguage(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <select value={language} onChange={handleSelect}>
+        <option value="English">English</option>
+        <option value="Italiano">Italiano</option>
+      </select>
+      <LanguageContext.Provider value={language}>
+        <DisplayLanguage />
+      </LanguageContext.Provider>
+      <p>
+        The language shown comes from the "value" attribute in the select tag.
+        <br />
+        The "value" attribute value is saved in the state and then passed to the provider.
+      </p>
+    </>
   );
 }
-
-export default App;
