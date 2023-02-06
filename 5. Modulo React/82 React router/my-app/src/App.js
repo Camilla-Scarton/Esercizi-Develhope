@@ -8,7 +8,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<Welcome name="Camilla" />} />
       <Route path="/counter" element={<ClickCounter />} />
-      <Route path={"/users/:username"} element={<ShowGithubUser />} /> 
+      <Route path="/users/:username" element={<ShowGithubUser />} /> 
     </Routes>
   );
 }
