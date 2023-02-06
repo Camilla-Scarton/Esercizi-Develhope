@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Link } from "react-router-dom";
+import { Welcome } from "./Welcome";
+import { ClickCounter } from "./ClickCounter";
+import { ShowGithubUser } from "./ShowGithubUser";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Welcome name="Camilla" />} />
+        <Route path="/counter" element={<ClickCounter />} />
+        <Route path="/users/:username" element={<ShowGithubUser />} />
+      </Routes>
+      <div>
+        <Link to="/">Welcome</Link>
+        <br />
+        <Link to="/counter">Counter</Link>
+        <br />
+        <Link to="/users/camilla-scarton">My Github name</Link>
+      </div>
+    </>
   );
 }
-
-export default App;
