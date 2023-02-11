@@ -12,8 +12,8 @@ interface Country {
 // - Extend the `Country` interface
 // - Add a `population` property with an appropriate type
 
-interface CountryWithPopulation {
-
+interface CountryWithPopulation extends Country {
+    population: number;
 }
 
 const countryA: CountryWithPopulation = {
