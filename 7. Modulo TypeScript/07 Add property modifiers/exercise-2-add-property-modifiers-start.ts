@@ -8,7 +8,7 @@
 interface Country {
     name: string;
     code: string;
-    population: number;
+    population?: number;
 }
 
 const countryA: Country = {
@@ -32,7 +32,7 @@ const countryC: Country = {
 // This will cause a type error. Remove the code that now has a type error.
 
 type Currency = {
-    name: string;
+    readonly name: string;
     code: string;
     symbol: string;
 };
@@ -43,7 +43,7 @@ const currencyData: Currency = {
     symbol: "€",
 };
 
-currencyData.name = "Gold";
+// currencyData.name = "Gold"; <- The name property is readonly! Its value is already "Euro" and we cannot change it without errors.
 
 currencyData.code = "GGG";
 
