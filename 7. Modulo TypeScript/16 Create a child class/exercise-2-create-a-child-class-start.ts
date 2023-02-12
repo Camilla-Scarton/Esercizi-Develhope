@@ -3,7 +3,7 @@
  */
 
 class Currency {
-    public name: string;
+    protected name: string;
     private code: string;
     private symbol: string;
 
@@ -50,7 +50,7 @@ class DetailedCurrency extends Currency {
         // Change the visibility of the parent class `name` field so
         // that its value can be read here in this child class method.
 
-        let description = `The ${this.name} currency uses the banknotes `; // with name now public
+        let description = `The ${this.name} currency uses the banknotes `; // with name now protected
 
         // Replace `null` with the value of the `banknotes` field.
 
