@@ -13,7 +13,7 @@ interface Country {
 // Change the `PartialCountry` type to use the `Partial` utility type.
 // This should fix the type error for the `countryA` object.
 
-type PartialCountry = Country;
+type PartialCountry = Partial<Country>;
 
 const countryA: PartialCountry = {
     code: "CN",
@@ -24,12 +24,13 @@ const countryA: PartialCountry = {
 // This should cause a type error for the `countryB` object.
 // Fix the type error by adding the missing property to the object.
 
-type CompleteCountry = Country;
+type CompleteCountry = Required<Country>;
 
 const countryB: CompleteCountry = {
     name: "Greece",
     code: "GR",
     languages: ["Greek"],
+    currency: "Euro",        // with Required all properties are mapped as required 
     population: 10_678_632,
 };
 
@@ -37,7 +38,7 @@ const countryB: CompleteCountry = {
 // This should cause a type error in the code below.
 // Remove the code that is incorrect.
 
-type ReadonlyCountry = Country;
+type ReadonlyCountry = Readonly<Country>;
 
 const countryC: ReadonlyCountry = {
     name: "Italy",
@@ -46,7 +47,7 @@ const countryC: ReadonlyCountry = {
     population: 60_317_116,
 };
 
-countryC.population = 60_317_117;
+// countryC.population = 60_317_117; <- removed because all properties mapped are set as readonly 
 
 console.log(countryC);
 
@@ -54,7 +55,7 @@ console.log(countryC);
 // Hint: The syntax is: Pick<Type, Keys>
 // This should fix the type error for the `countryD` object.
 
-type CountryWithPopulation = Country;
+type CountryWithPopulation = Pick<Country, "name" | "code" | "population">;
 
 const countryD: CountryWithPopulation = {
     name: "New Zealand",
@@ -65,7 +66,7 @@ const countryD: CountryWithPopulation = {
 // Change the `CountryWithoutPopulation` type to use the `Omit` utility type.
 // This should fix the type error for the `countryE` object.
 
-type CountryWithoutPopulation = Country;
+type CountryWithoutPopulation = Omit<Country, "population">;
 
 const countryE: CountryWithoutPopulation = {
     name: "Thailand",
