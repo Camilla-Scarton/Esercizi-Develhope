@@ -15,8 +15,8 @@ type CountryData = {
 //
 // These changes should fix all the type errors.
 
-type Descriptions = {
-    [Property in keyof Type]: never;
+type Descriptions<Type> = {
+    [Property in keyof Type]: string;
 };
 
 const countryDataDescriptions: Descriptions<CountryData> = {
