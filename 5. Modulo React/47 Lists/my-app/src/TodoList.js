@@ -22,11 +22,11 @@ export class TodoList extends Component {
     // to add new todo in todos array (changes in array will trigger automatic re-render)
     addTodo = () => {
         if (this.state.newTodo) {
-            this.state.items.push(this.state.newTodo);
-
-            this.setState({
-                newTodo: "", // <- to clear input after adding (+ value={this.state.newTodo} added in <input>)
-                warning: null, // extra to delete warning from render
+            this.setState(state => {
+                state.items.push(this.state.newTodo);
+                state.newTodo = ""; // <- to clear input after adding (+ value={this.state.newTodo} added in <input>)
+                state.warning = null; // extra to delete warning from render
+                return state;
             })
         } else {
             // warning is rendered if user tries to add empty todo
