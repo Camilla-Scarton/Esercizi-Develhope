@@ -13,6 +13,7 @@ export class TodoList extends Component {
     // to update state value of newTodo based on input
     setNewTodo = (event) => {
         this.setState({
+            ...this.state,
             newTodo: event.target.value,
         })
     }
@@ -29,6 +30,7 @@ export class TodoList extends Component {
         } else {
             // warning is rendered if user tries to add empty todo
             this.setState({
+                ...this.state,
                 warning: <div><strong>Write something before adding!</strong></div>,
             })
         }

@@ -15,6 +15,7 @@ export class TodoList extends Component {
     // to update state value of newTodo based on input
     setNewTodo = (event) => {
         this.setState({
+            ...this.state,
             newTodo: event.target.value,
         })
     }
@@ -31,6 +32,7 @@ export class TodoList extends Component {
         } else {
             // warning is rendered if user tries to add empty todo
             this.setState({
+                ...this.state,
                 warning: <div><strong>Write something before adding!</strong></div>,
             })
         }
@@ -40,6 +42,7 @@ export class TodoList extends Component {
     clearTodos = () => {
         if (this.state.items.length > 0) {
             this.setState({
+                ...this.state,
                 items: [],
 
                 error: null, // extra to delete error from render
@@ -47,6 +50,7 @@ export class TodoList extends Component {
         } else {
             // error is rendered if user tries to clear empty list
             this.setState({
+                ...this.state,
                 error: <div><strong>List already empty!</strong></div>,
             })
         }
@@ -58,6 +62,7 @@ export class TodoList extends Component {
         let _items = [...this.state.items];
         _items = _items.filter((todo, i) => i !== key);
         this.setState({
+            ...this.state,
             items: _items,
         })
     }
