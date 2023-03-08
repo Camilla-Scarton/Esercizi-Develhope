@@ -7,7 +7,9 @@ const server = createServer((request, response) => {
 
   response.setHeader("Content-Type", "application/json");
 
-  const jsonResponseBody = JSON.stringify({ location: "Earth" });
+  // Content-Length visible in terminal with command "curl --verbose localhost:3000/" (+ "sudo apt install curl")
+  //const jsonResponseBody = JSON.stringify({ location: "Earth" }); // Content-Length: 20 (in bytes / length of '{"location":"Earth"}')
+  const jsonResponseBody = JSON.stringify({ location: "Mars" }); // Content-Length: 19 (in bytes / length of '{"location":"Mars"}')
 
   response.end(jsonResponseBody);
 });
