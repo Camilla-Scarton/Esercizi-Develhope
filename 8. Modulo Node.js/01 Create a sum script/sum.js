@@ -1,0 +1,1 @@
+console.log(5+6); // + node sum.js in console to see "11" as output
