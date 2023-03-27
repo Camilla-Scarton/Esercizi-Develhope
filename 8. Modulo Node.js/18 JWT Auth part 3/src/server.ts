@@ -45,7 +45,7 @@ app.put("/api/planets/:id", updateById);
 app.delete("/api/planets/:id", deleteById);
 
 // `POST /api/planets/:id/image`: add image to a planet selected by id
-app.post("/api/planets/:id/image", upload.single("image"), createImage);
+app.post("/api/planets/:id/image", authorize, upload.single("image"), createImage);
 
 // login
 app.post("/api/users/login", logIn);
