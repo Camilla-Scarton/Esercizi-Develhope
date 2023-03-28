@@ -1,0 +1,3 @@
+Component Lifecycle 03
+
+Reset the counter to the initial value received as a prop when the value is greater than ten times that initial value. Do so in the `componentDidUpdate` lifecycle method.

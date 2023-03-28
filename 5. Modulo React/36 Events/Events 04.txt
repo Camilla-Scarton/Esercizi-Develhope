@@ -1,0 +1,3 @@
+Events 04
+
+Modify the `ClickTracker` so that each button contains an image instead of a text. How does this affect the event handler?

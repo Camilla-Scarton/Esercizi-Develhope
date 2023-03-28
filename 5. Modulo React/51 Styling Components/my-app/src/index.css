@@ -1,0 +1,7 @@
+.log-button-active {
+    background-color: green;
+}
+
+.log-button-not-active {
+    background-color: red;
+}
